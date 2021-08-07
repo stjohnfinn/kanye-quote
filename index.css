@@ -1,0 +1,24 @@
+body {
+  min-height: 100vh;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body h1 {
+  font-family: "Palette Mosaic";
+  font-size: 4rem;
+  text-align: center;
+}
+body button {
+  background: none;
+  font-family: "IBM Plex Sans";
+  border: 1px black solid;
+  border-radius: 2px;
+  font-size: 2rem;
+}
+body button:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=index.css.map */
