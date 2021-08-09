@@ -1,4 +1,14 @@
+html {
+    background-image: url('./images/hypnotize.png');
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 body {
+    box-shadow: 0px 0px 10px rgb(158, 158, 158);
+    margin: 0;
+    width: min(1300px, 100%);
     min-height: 100vh;
     background-color: whitesmoke;
     display: flex;
@@ -7,19 +17,104 @@ body {
 
     h1 {
         font-family: "Palette Mosaic";
-        font-size: 4rem;
+        font-size: 5rem;
         text-align: center;
     }
 
     button {
+        cursor: pointer;
         background: none;
         font-family: "IBM Plex Sans";
-        border: 1px black solid;
-        border-radius: 2px;
-        font-size: 2rem;
+        border: 2px black solid;
+        font-size: 2.5rem;
+        width: min(400px, 60vw);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        transition: 0.2s all;
+        position: relative;
+        z-index: 1;
 
         &:focus {
             outline: none;
         }
+
+        &::after {
+            z-index: -1;
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: black;
+            width: 100%;
+            height: 0;
+            opacity: 0;
+            transition: 0.2s all;
+        }
+
+        &:hover {
+            color: white;
+
+            &::after {
+                height: 100%;
+                opacity: 1;
+            }
+        }
     }
+
+    #wisdom {
+        width: min(90%, 800px);
+
+        p {
+            border: 2px black solid;
+            border-bottom: none;
+            font-size: 1rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            margin: 0;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            width:min-content;
+            text-align: center;
+        }
+
+        #quote {
+            border: 2px black solid;
+    
+            h3 {
+                font-weight: 100;
+                margin: 1rem;
+                font-size: 3rem;
+                padding: 1rem;
+                font-family: "Fredericka the Great";
+            }
+        
+            h2 {
+                font-weight: 100;
+                margin: 1rem;
+                padding: 1rem;
+                text-align: right;
+                font-size: 4rem;
+                font-family: "Fredericka the Great";
+            }
+        }
+    }
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.yellow {
+    color: rgb(202, 202, 0);
+}
+
+.blue {
+    color: blue;
 }
