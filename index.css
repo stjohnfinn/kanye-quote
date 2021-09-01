@@ -8,7 +8,7 @@ html {
 body {
   box-shadow: 0px 0px 10px #9e9e9e;
   margin: 0;
-  width: min(1300px, 100%);
+  width: min(1100px, 100%);
   min-height: 100vh;
   background-color: whitesmoke;
   display: flex;
@@ -34,6 +34,7 @@ body button {
   transition: 0.2s all;
   position: relative;
   z-index: 1;
+  border-radius: 3px;
 }
 body button:focus {
   outline: none;
@@ -46,8 +47,8 @@ body button::after {
   bottom: 0;
   left: 0;
   background-color: black;
-  width: 100%;
-  height: 0;
+  width: 0%;
+  height: 100%;
   opacity: 0;
   transition: 0.2s all;
 }
@@ -55,11 +56,14 @@ body button:hover {
   color: white;
 }
 body button:hover::after {
-  height: 100%;
+  width: 100%;
   opacity: 1;
 }
 body #wisdom {
-  width: min(90%, 800px);
+  transition: 0.2s all;
+  opacity: 0;
+  width: min(90%, 700px);
+  margin: 20px;
 }
 body #wisdom p {
   border: 2px black solid;
@@ -72,9 +76,11 @@ body #wisdom p {
   padding-left: 1rem;
   width: min-content;
   text-align: center;
+  border-radius: 3px 3px 0px 0px;
 }
 body #wisdom #quote {
   border: 2px black solid;
+  border-radius: 0px 3px 3px 3px;
 }
 body #wisdom #quote h3 {
   font-weight: 100;

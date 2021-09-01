@@ -2,19 +2,20 @@
 <html>
     <head>
         <link rel='stylesheet' href='./index.css' />
-        <script src='./index.js' ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=IBM+Plex+Sans:wght@300;400;500;600&family=Palette+Mosaic&display=swap" rel="stylesheet">
+        <script src='./scripts/script.js'></script>
     </head>
     <body>
         <h1><span class='red'>T</span>he <span class='green'>B</span>ook <span class='blue'>o</span>f <span class='yellow'>Y</span>e</h1>
-        <button>Hear His Wisdom</button>
+        <button id='generateBtn'>Hear His Wisdom</button>
         <div id='wisdom'>
-            <p>#28</p>
+            <p id='quote-number'>#28</p>
             <div id='quote'>
-                <h3>"All black tux, nigga shoes lavender"</h3>
-                <h2>-Corinthians 5:18</h1>
+                <h3 id='quote-content'>"All black tux, nigga shoes lavender"</h3>
+                <h2 id='quote-name'>- Corinthians 5:18</h1>
             </div>
         </div>
     </body>
