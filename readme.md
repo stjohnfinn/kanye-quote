@@ -1,0 +1,1 @@
+A small personal project made for learning SEO and JSON usage.
