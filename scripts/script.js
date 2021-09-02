@@ -1,4 +1,5 @@
 let lines;
+let censor = true;
 
 let requestURL = './scripts/lines.json';
 let request = new XMLHttpRequest();
@@ -16,9 +17,39 @@ $(document).ready( function() {
 
     $('#generateBtn').click( () => {
         $('#wisdom').css('opacity', '1');
+        $('#wisdom').css('height', '100%');
 
         randomizeQuote();
     });
+
+    $('#clean-toggle-switch').click( () => {
+        if ($('#toggle-slider').css('left') === '0px') {
+            $('#toggle-slider').css('left', '70%');
+            $('#toggle-slider').css('background-color', 'rgb(150, 71, 71)');
+            $('#clean-toggle-switch').css('background-color', 'rgb(218, 76, 76)');
+            $('#toggle-label').text('Explicit');
+            censor = false;
+        } else {
+            $('#toggle-slider').css('left', '0px');
+            $('#toggle-slider').css('background-color', 'rgb(50, 140, 90)');
+            $('#clean-toggle-switch').css('background-color', 'rgb(50, 205, 105)');
+            $('#toggle-label').text('Clean');
+            censor = true;
+        }
+    });
+
+    $('#aboutBtn').click( () => {
+        if ($('#about').css('visibility') === 'hidden') {
+            $('#about').css('visibility', 'visible');
+            $('#about').css('height', '100%');
+            $('#about').css('opacity', '1');
+        } else {
+            $('#about').css('opacity', '0');
+            $('#about').css('height', '0%');
+            $('#about').css('visibility', 'hidden');
+        }
+    })
+
 });
 
 function randomizeQuote() {
@@ -26,13 +57,22 @@ function randomizeQuote() {
     let quote = -1;
 
     speaker = Math.floor( Math.random() * lines.dudes.length);
-    quote = Math.floor( Math.random() * lines.yeQuotes.length);
+    
+    if (censor) {
+        quote = Math.floor( Math.random() * lines.cleanYeQuotes.length);
+    } else {
+        quote = Math.floor( Math.random() * lines.yeQuotes.length);
+    }
 
     console.log(speaker);
     console.log(quote);
 
     $('#quote-name').text('- ' + lines.dudes[speaker]);
-    $('#quote-content').text(lines.yeQuotes[quote]);
+    if (censor) {
+        $('#quote-content').text(lines.cleanYeQuotes[quote]);
+    } else {
+        $('#quote-content').text(lines.yeQuotes[quote]);
+    }
 
     $('#quote-number').text('#' + Math.floor( Math.random() * 300));
 }

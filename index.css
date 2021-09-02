@@ -20,17 +20,24 @@ body h1 {
   font-size: 5rem;
   text-align: center;
 }
+body a {
+  color: black;
+  text-decoration: none;
+}
+body a:visited {
+  text-decoration: none;
+}
 body button {
+  background-color: #e6e6e6;
   cursor: pointer;
-  background: none;
   font-family: "IBM Plex Sans";
   border: 2px black solid;
   font-size: 2.5rem;
   width: min(400px, 60vw);
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 10px;
+  margin-bottom: 2rem;
   transition: 0.2s all;
   position: relative;
   z-index: 1;
@@ -62,10 +69,13 @@ body button:hover::after {
 body #wisdom {
   transition: 0.2s all;
   opacity: 0;
+  height: 0;
   width: min(90%, 700px);
-  margin: 20px;
+  margin: 5rem;
+  margin-top: 0;
 }
 body #wisdom p {
+  background-color: #e6e6e6;
   border: 2px black solid;
   border-bottom: none;
   font-size: 1rem;
@@ -79,8 +89,10 @@ body #wisdom p {
   border-radius: 3px 3px 0px 0px;
 }
 body #wisdom #quote {
+  background-color: #e6e6e6;
   border: 2px black solid;
   border-radius: 0px 3px 3px 3px;
+  transition: 0.2s all;
 }
 body #wisdom #quote h3 {
   font-weight: 100;
@@ -96,6 +108,93 @@ body #wisdom #quote h2 {
   text-align: right;
   font-size: 4rem;
   font-family: "Fredericka the Great";
+}
+body #clean-toggle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+body #clean-toggle #clean-toggle-switch {
+  cursor: pointer;
+  background-color: #32cd69;
+  border: 2px black solid;
+  border-radius: 3px;
+  height: 30px;
+  width: max(8%, 100px);
+  position: relative;
+  transition: 0.2s all;
+}
+body #clean-toggle #clean-toggle-switch #toggle-slider {
+  height: 100%;
+  width: 30%;
+  background-color: #328c5a;
+  border-radius: 2px;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  transition: 0.2s all;
+}
+body #clean-toggle p {
+  font-family: "IBM Plex Sans";
+  color: #646464;
+  font-weight: bold;
+  font-size: 1rem;
+}
+body #aboutBtn {
+  margin-bottom: 3rem;
+  margin-top: 0;
+}
+body #about {
+  visibility: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(90%, 700px);
+  margin-bottom: 80px;
+  transition: 0.2s all;
+}
+body #about p {
+  background-color: #e6e6e6;
+  border: 2px black solid;
+  border-radius: 3px;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin: 0;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  text-align: center;
+}
+body #about div {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body #about a {
+  background-color: #e6e6e6;
+  border: 2px black solid;
+  border-radius: 3px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin: 0;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  text-align: center;
+  font-family: "Palette Mosaic";
+  font-size: 2rem;
+  transition: 0.2s all;
+}
+body #about a:hover {
+  background-color: #acacac;
 }
 
 .red {
