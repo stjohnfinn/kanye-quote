@@ -113,7 +113,7 @@ body #wisdom #spotify-link a img {
 body #wisdom #quote {
   background-color: #e6e6e6;
   border: 2px black solid;
-  border-radius: 0px 3px 0px 3px;
+  border-radius: 0px 3px 3px 3px;
   transition: 0.2s all;
 }
 body #wisdom #quote h3 {
