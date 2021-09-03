@@ -99,11 +99,38 @@ body {
             border-radius: 3px 3px 0px 0px;
         }
 
+        #spotify-link {
+            display: flex;
+            flex-direction: column;
+            align-items:flex-end;
+
+            a {
+                border: 2px black solid;
+                height: 100%;
+                border-radius: 0px 0px 3px 3px;
+                border-top: none;
+                width: 2.5rem;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                cursor: pointer;
+
+                img {
+                    background-color: rgb(230, 230, 230);
+                    padding: 0.25rem;
+                    height: 1.5rem;
+                }
+            }
+        }
+
         #quote {
             background-color: rgb(230, 230, 230);
             border: 2px black solid;
 
-            border-radius: 0px 3px 3px 3px;
+            border-radius: 0px 3px 0px 3px;
             transition: 0.2s all;
     
             h3 {
@@ -208,7 +235,7 @@ body {
             border-radius: 3px;
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
-            margin: 0;
+            margin: 5px;
             padding-right: 1rem;
             padding-left: 1rem;
             text-align: center;

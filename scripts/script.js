@@ -55,6 +55,7 @@ $(document).ready( function() {
 function randomizeQuote() {
     let speaker = -1;
     let quote = -1;
+    let songLink = '';
 
     speaker = Math.floor( Math.random() * lines.dudes.length);
     
@@ -63,6 +64,8 @@ function randomizeQuote() {
     } else {
         quote = Math.floor( Math.random() * lines.yeQuotes.length);
     }
+
+    songLink = lines.links[quote];
 
     console.log(speaker);
     console.log(quote);
@@ -73,6 +76,6 @@ function randomizeQuote() {
     } else {
         $('#quote-content').text(lines.yeQuotes[quote]);
     }
-
     $('#quote-number').text('#' + Math.floor( Math.random() * 300));
+    $('#song-link').attr('href', songLink);
 }
