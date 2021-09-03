@@ -100,6 +100,8 @@ body {
         }
 
         #spotify-link {
+            background-color: rgb(202, 202, 0);
+
             display: flex;
             flex-direction: column;
             align-items:flex-end;
@@ -123,8 +125,6 @@ body {
                     padding: 0.25rem;
                     height: 1.5rem;
                 }
-
-                background-color: rgb(50, 140, 90);
             }
         }
 
