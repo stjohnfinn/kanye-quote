@@ -27,13 +27,13 @@ $(document).ready( function() {
             $('#toggle-slider').css('left', '70%');
             $('#toggle-slider').css('background-color', 'rgb(150, 71, 71)');
             $('#clean-toggle-switch').css('background-color', 'rgb(218, 76, 76)');
-            $('#toggle-label').text('Explicit');
+            $('#toggle-label').text('Mode: Explicit');
             censor = false;
         } else {
             $('#toggle-slider').css('left', '0px');
             $('#toggle-slider').css('background-color', 'rgb(50, 140, 90)');
             $('#clean-toggle-switch').css('background-color', 'rgb(50, 205, 105)');
-            $('#toggle-label').text('Clean');
+            $('#toggle-label').text('Mode: Clean');
             censor = true;
         }
     });
